@@ -1,0 +1,69 @@
+{
+  "role_id": "trades_assistant",
+  "role_name": "Trades Assistant",
+  "version": "1.0.1",
+  "effective_from": "2025-09-03",
+  "locale": "en-AU",
+
+  "rules": {
+    "fail_on_any_red_flag": false,
+    "max_unknown_required": 1
+  },
+
+  "required": [
+    {
+      "id": "shutdown_assist_exp",
+      "name": "Experience assisting trades in shutdowns/projects",
+      "hint": "shutdowns, outages, industrial projects supporting fitters/boilermakers/electricians/riggers"
+    },
+    {
+      "id": "white_card",
+      "name": "Construction White Card (or Standard 11)",
+      "hint": "White Card (CPCCWHS1001) or Standard 11 GI induction"
+    },
+    {
+      "id": "drivers_license",
+      "name": "Current driver’s licence",
+      "hint": "driver licence/driver's license/QLD open or P"
+    }
+  ],
+
+  "positives": [
+    { "id": "coal_chpp_shutdowns", "name": "Coal/CHPP/terminal shutdown experience", "hint": "coal prep plant/terminal/mining shutdowns" },
+    { "id": "infra_exposure",      "name": "Exposure to stackers, draglines, conveyors, ports", "hint": "stacker reclaimer/dragline/conveyor/shiploader" },
+    { "id": "forklift_lf",         "name": "Forklift licence (LF)", "hint": "LF licence/forklift ticket" },
+    { "id": "ewp_wp",              "name": "EWP licence (WP)", "hint": "elevated work platform ticket" },
+    { "id": "dogging_dg",          "name": "Dogging (DG) ticket", "hint": "dogging licence" },
+    { "id": "telehandler",         "name": "Telehandler ticket", "hint": "telehandler/Manitou" },
+    { "id": "first_aid",           "name": "First Aid / CPR certification", "hint": "First Aid or CPR" },
+    { "id": "basic_mech_elec",     "name": "Basic mechanical/electrical aptitude", "hint": "use of power tools, drills, grinders" },
+    { "id": "trade_interest",      "name": "Interest in progressing to a trade", "hint": "keen to start apprenticeship/learn trade" },
+    { "id": "reliability",         "name": "Reliability and strong work ethic", "hint": "punctual, consistent attendance" },
+    { "id": "team_support",        "name": "Supports multiple trades flexibly", "hint": "helped fitters, riggers, boilermakers" },
+    { "id": "teamwork",            "name": "Good teamwork and communication", "hint": "works well in teams, communicates clearly" },
+    { "id": "contractor_history",  "name": "Worked for reputable shutdown contractors", "hint": "Monadelphous, Kaefer, Richglen, CQ Field, FMS Group" },
+    { "id": "mackay_local",        "name": "Mackay/local residency", "hint": "resides in Mackay/regional QLD" }
+  ],
+
+  "red_flags": [
+    {
+      "id": "non_au",
+      "name": "Candidate explicitly located outside Australia",
+      "hard_fail": false,
+      "hint": "If address clearly outside AU → Red flag. If missing/unclear → Unknown."
+    },
+    {
+      "id": "poor_safety",
+      "name": "Indicators of poor safety behaviour",
+      "hard_fail": true,
+      "hint": "ignores safety rules, refuses instructions"
+    }
+  ],
+
+  "expirable_items": ["white_card", "drivers_license"],
+
+  "notes": {
+    "unknown_policy": "If a required item is not clearly in the CV, mark as Unknown. If more than max_unknown_required are Unknown, verdict should lean 'Unsure – Needs Manual Review'.",
+    "site_ready_tip": "White Card OR Standard 11 is acceptable as site readiness."
+  }
+}
