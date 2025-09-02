@@ -1,0 +1,54 @@
+{
+  "role_id": "boilermaker",
+  "role_name": "Boilermaker",
+  "version": "1.0.1",
+  "effective_from": "2025-09-03",
+  "locale": "en-AU",
+
+  "rules": {
+    "fail_on_any_red_flag": false,
+    "max_unknown_required": 1
+  },
+
+  "required": [
+    {
+      "id": "trade_cert",
+      "name": "Certificate III (or higher) in Boilermaking/Heavy Fabrication",
+      "hint": "Certificate III/Cert III/Cert 3 in Engineering (Boilermaker/Heavy Fabrication)"
+    },
+    {
+      "id": "exp_2yrs",
+      "name": "Minimum 2 years relevant post-trade boilermaker/fabrication experience",
+      "hint": "2+ years post-trade in boilermaker/fabrication roles"
+    },
+    {
+      "id": "site_ready",
+      "name": "Site readiness: Standard 11 OR White Card (either acceptable)",
+      "hint": "Standard 11 (GI/S11) OR Construction White Card (CPCCWHS1001)"
+    }
+  ],
+
+  "positives": [
+    { "id": "qld_mining",        "name": "Queensland coal-mining/site experience", "hint": "QLD mining sites: Goonyella, Blackwater, Moranbah, etc." },
+    { "id": "welding_quals",     "name": "Recognised welding quals (ISO 9606, AS/NZS 2980)", "hint": "ISO 9606 / AS/NZS 2980" },
+    { "id": "fcaw_plate",        "name": "FCAW plate tests 1G–4G / 1F–4F", "hint": "flux-cored arc welding, 1G-4G, 1F-4F" },
+    { "id": "dragline_exp",      "name": "Dragline maintenance experience", "hint": "dragline shutdowns/maintenance" },
+    { "id": "infra_exp",         "name": "Stackers, reclaimers, shiploaders, or port infrastructure", "hint": "stackers/reclaimers/shiploaders/port infrastructure" },
+    { "id": "contractor_history","name": "Work with reputable mining contractors", "hint": "Kaefer, Monadelphous, Richglen, CQ Field, FMS Group" },
+    { "id": "drivers_license",   "name": "Current driver’s licence", "hint": "driver licence/driver's license" }
+  ],
+
+  "red_flags": [
+    {
+      "id": "non_au",
+      "name": "Candidate explicitly located outside Australia",
+      "hard_fail": false,
+      "hint": "If location text clearly outside AU → red flag. If missing/unclear → mark Unknown."
+    }
+  ],
+
+  "notes": {
+    "unknown_policy": "If evidence for a required item is unclear or not explicit, mark as Unknown (do not guess). If > max_unknown_required, prefer 'Unsure – Needs Manual Review'.",
+    "site_ready_tip": "Mark 'site_ready' as met if EITHER Standard 11 OR White Card appears. If neither is clearly stated, set Unknown."
+  }
+}
