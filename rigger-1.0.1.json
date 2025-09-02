@@ -1,0 +1,62 @@
+{
+  "role_id": "rigger",
+  "role_name": "Rigger",
+  "version": "1.0.1",
+  "effective_from": "2025-09-03",
+  "locale": "en-AU",
+
+  "rules": {
+    "fail_on_any_red_flag": false,
+    "max_unknown_required": 1
+  },
+
+  "required": [
+    {
+      "id": "riggers_ticket",
+      "name": "Valid Intermediate or Advanced Riggers ticket",
+      "hint": "RI or RA licence/ticket"
+    },
+    {
+      "id": "exp_shutdown",
+      "name": "Shutdown or heavy industry project experience",
+      "hint": "shutdown/turnaround/project in mining or heavy industry"
+    },
+    {
+      "id": "site_ready",
+      "name": "Site readiness: White Card or Standard 11",
+      "hint": "Construction White Card (CPCCWHS1001) or Standard 11 (S11/GI)"
+    }
+  ],
+
+  "positives": [
+    { "id": "stacker_shutdown",    "name": "Stacker reclaimer shutdown experience", "hint": "structural repairs, slew drives, shutdowns" },
+    { "id": "pit_to_port",         "name": "Pit-to-port shutdown/maintenance", "hint": "shutdowns across terminals, stackers, reclaimers" },
+    { "id": "coal_board_medical",  "name": "Current Coal Board Medical (or ability to obtain)", "hint": "CBM/section 4 medical" },
+    { "id": "msic",                "name": "MSIC (Marine Security ID Card)", "hint": "port/terminal access" },
+    { "id": "forklift_lf",         "name": "Forklift licence (LF)", "hint": "LF licence/forklift ticket" },
+    { "id": "ewp_wp",              "name": "EWP licence (WP)", "hint": "elevated work platform" },
+    { "id": "dogging_dg",          "name": "Dogging (DG) ticket", "hint": "dogging licence" },
+    { "id": "rigging_cb",          "name": "Basic rigging (CB) ticket", "hint": "basic rigging ticket" },
+    { "id": "overhead_crane",      "name": "Overhead crane operation/licence", "hint": "overhead crane" },
+    { "id": "telehandler",         "name": "Telehandler ticket", "hint": "telehandler/Manitou" },
+    { "id": "contractors_history", "name": "Worked with reputable shutdown contractors", "hint": "Monadelphous, Downer, Sync Lift, UGL" },
+    { "id": "mackay_local",        "name": "Mackay/local residency", "hint": "resides in Mackay/regional QLD" },
+    { "id": "safety_initiatives",  "name": "Proactive in safety leadership/initiatives", "hint": "toolbox talks, safety rep, initiatives" }
+  ],
+
+  "red_flags": [
+    {
+      "id": "non_au",
+      "name": "Candidate explicitly located outside Australia",
+      "hard_fail": false,
+      "hint": "If address clearly outside AU → Red flag. If missing/unclear → Unknown."
+    }
+  ],
+
+  "expirable_items": ["white_card", "site_ready"],
+
+  "notes": {
+    "unknown_policy": "If a required item is not clearly in the CV, mark as Unknown. If more than max_unknown_required are Unknown, verdict should lean 'Unsure – Needs Manual Review'.",
+    "site_ready_tip": "Candidate is 'site_ready' if they have either White Card OR Standard 11. Missing both = Unknown."
+  }
+}
