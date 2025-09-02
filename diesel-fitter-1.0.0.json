@@ -1,0 +1,166 @@
+{
+  "role_id": "diesel_fitter",
+  "version": "1.0.0",
+  "effective_from": "2025-09-02",
+  "locale": "en-AU",
+
+  "rules": {
+    "fail_on_any_red_flag": true,
+    "max_unknown_required": 0,
+    "thresholds": { "excellent": 7, "good": 4, "unsure": 1 }
+  },
+
+  "required": [
+    {
+      "id": "diesel_trade_cert",
+      "name": "Certificate III in Heavy Vehicle/Diesel Fitting (or equivalent)",
+      "hard_fail": true,
+      "hint": "Certificate III Heavy Commercial Vehicle, Mobile Plant Technology, Diesel Fitting, or equivalent"
+    },
+    {
+      "id": "exp_2yrs",
+      "name": "Minimum 2 years post-trade experience with HME/heavy mobile plant",
+      "hard_fail": true,
+      "hint": "experience with heavy mobile equipment, mining, ports, or resources"
+    },
+    {
+      "id": "white_card",
+      "name": "Valid Construction White Card",
+      "hard_fail": true,
+      "hint": "White Card/General Construction Induction/CPCCWHS1001"
+    },
+    {
+      "id": "safety_tickets",
+      "name": "Working at Heights, Confined Space & Gas Test Atmospheres (current ≤ 2 years)",
+      "hard_fail": true,
+      "hint": "WAH/Confined Space/GTA tickets current/valid within 2 years"
+    },
+    {
+      "id": "safety_mindset",
+      "name": "Strong safety mindset, teamwork, clear communication",
+      "hard_fail": true,
+      "hint": "safety focus, team player, good communication under shutdown/project conditions"
+    }
+  ],
+
+  "positives": [
+    {
+      "id": "forklift_lf",
+      "name": "Forklift licence (LF)",
+      "weight": 1,
+      "hint": "LF licence/forklift ticket"
+    },
+    {
+      "id": "ewp_wp",
+      "name": "EWP licence (WP)",
+      "weight": 1,
+      "hint": "EWP/work platform ticket"
+    },
+    {
+      "id": "rigging",
+      "name": "Rigging/Slings competency",
+      "weight": 1,
+      "hint": "basic rigging/slings HRWL"
+    },
+    {
+      "id": "field_service",
+      "name": "Field-based diesel fitting experience",
+      "weight": 2,
+      "hint": "field service, breakdowns, servicing mobile equipment on site"
+    },
+    {
+      "id": "shutdown_exp",
+      "name": "Exposure to project/shutdown-style maintenance",
+      "weight": 2,
+      "hint": "high-pressure shutdown/project diesel maintenance"
+    },
+    {
+      "id": "msic",
+      "name": "MSIC (Marine Security Identification Card)",
+      "weight": 1,
+      "hint": "MSIC/port access/terminal security card"
+    },
+    {
+      "id": "mackay_local",
+      "name": "Local Mackay/regional QLD residency",
+      "weight": 1,
+      "hint": "resides in Mackay/locality allowance"
+    },
+    {
+      "id": "stacker_reclaimer_exp",
+      "name": "Maintenance on stacker-reclaimer components, haul trucks, or auxiliary plant",
+      "weight": 2,
+      "hint": "stacker-reclaimer mobile components, haul trucks, auxiliary plant"
+    },
+    {
+      "id": "welding_basic",
+      "name": "Basic welding/fabrication competency",
+      "weight": 1,
+      "hint": "basic welding/fabrication for repairs"
+    },
+    {
+      "id": "coal_board_medical",
+      "name": "Current Coal Board Medical",
+      "weight": 1,
+      "hint": "Coal Board Medical certificate"
+    },
+    {
+      "id": "contractors_history",
+      "name": "History with shutdown contractors (e.g., Sync Lift, Monadelphous, UGL, Downer)",
+      "weight": 1,
+      "hint": "worked for reputable shutdown contractors"
+    },
+    {
+      "id": "flexibility",
+      "name": "Flexibility for ROTB/FIFO schedules",
+      "weight": 1,
+      "hint": "willing to work fly-in fly-out or rostered on-the-bus"
+    },
+    {
+      "id": "safety_initiatives",
+      "name": "Proactive safety leadership or recognition",
+      "weight": 1,
+      "hint": "safety awards, initiatives, toolbox leadership"
+    }
+  ],
+
+  "red_flags": [
+    {
+      "id": "no_trade_cert",
+      "name": "No recognised diesel/mobile plant trade qualification",
+      "hard_fail": true,
+      "penalty": 4,
+      "hint": "no Certificate III or equivalent trade qualification"
+    },
+    {
+      "id": "no_diesel_exp",
+      "name": "No evidence of diesel fitting experience",
+      "hard_fail": true,
+      "penalty": 4,
+      "hint": "no experience in diesel fitting, heavy equipment, or mining"
+    },
+    {
+      "id": "missing_safety_certs",
+      "name": "Missing mandatory safety certifications",
+      "hard_fail": true,
+      "penalty": 4,
+      "hint": "no White Card, Heights, Confined Space, Gas Test"
+    },
+    {
+      "id": "no_medical_screening",
+      "name": "Unwilling/unable to complete medical or drug/alcohol screening",
+      "hard_fail": false,
+      "penalty": 4,
+      "hint": "refused/failed pre-employment medical or D&A test"
+    },
+    {
+      "id": "limited_availability",
+      "name": "Limited mobility/availability for regional QLD work",
+      "hard_fail": false,
+      "penalty": 2,
+      "hint": "cannot travel, not flexible for regional projects"
+    }
+  ],
+
+  "expirable_items": ["white_card", "safety_tickets"]
+}

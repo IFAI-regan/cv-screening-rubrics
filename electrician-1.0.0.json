@@ -1,0 +1,166 @@
+{
+  "role_id": "electrician",
+  "version": "1.1.0",
+  "effective_from": "2025-09-02",
+  "locale": "en-AU",
+
+  "rules": {
+    "fail_on_any_red_flag": true,
+    "max_unknown_required": 0,
+    "thresholds": { "excellent": 7, "good": 4, "unsure": 1 }
+  },
+
+  "required": [
+    {
+      "id": "elec_trade_cert",
+      "name": "Qualified/licenced Electrician",
+      "hard_fail": true,
+      "hint": "A-grade electrician licence; QLD/NSW electrical licence; Australian trade certificate"
+    },
+    {
+      "id": "shutdown_exp",
+      "name": "Shutdown/project-based maintenance experience (mining/heavy industry)",
+      "hard_fail": true,
+      "hint": "shutdowns/turnarounds/projects in mining/heavy industrial contexts"
+    },
+    {
+      "id": "white_card",
+      "name": "Construction White Card",
+      "hard_fail": true,
+      "hint": "White Card/General Construction Induction/CPCCWHS1001"
+    },
+    {
+      "id": "safety_tickets",
+      "name": "Working at Heights, Confined Space, Gas Test Atmospheres (current ≤ 2 years)",
+      "hard_fail": true,
+      "hint": "WAH/Confined Space/GTA valid/current, within 2 years"
+    },
+    {
+      "id": "safety_mindset",
+      "name": "Commitment to safety, teamwork, comms & problem-solving",
+      "hard_fail": true,
+      "hint": "team-oriented, safety focus, effective communicator, problem solving"
+    }
+  ],
+
+  "positives": [
+    {
+      "id": "coal_board_medical",
+      "name": "Current Coal Board Medical or ability to obtain",
+      "weight": 2,
+      "hint": "Coal Board Medical/CBM/section 4 medical"
+    },
+    {
+      "id": "msic",
+      "name": "MSIC (Marine Security Identification Card)",
+      "weight": 1,
+      "hint": "MSIC/port access/terminal security card"
+    },
+    {
+      "id": "forklift_lf",
+      "name": "Forklift licence (LF)",
+      "weight": 1,
+      "hint": "LF licence/forklift ticket"
+    },
+    {
+      "id": "ewp_wp",
+      "name": "EWP licence (WP)",
+      "weight": 1,
+      "hint": "EWP/work platform ticket"
+    },
+    {
+      "id": "dogging_dg",
+      "name": "Dogging (DG) ticket",
+      "weight": 1,
+      "hint": "dogging licence/DG ticket"
+    },
+    {
+      "id": "rigging_cb",
+      "name": "Rigging (CB) ticket",
+      "weight": 1,
+      "hint": "basic rigging/CB licence"
+    },
+    {
+      "id": "overhead_crane",
+      "name": "Overhead crane licence/experience",
+      "weight": 1,
+      "hint": "overhead crane operation/ticket"
+    },
+    {
+      "id": "telehandler",
+      "name": "Telehandler ticket",
+      "weight": 1,
+      "hint": "telehandler/Manitou ticket"
+    },
+    {
+      "id": "mackay_local",
+      "name": "Local Mackay residency",
+      "weight": 1,
+      "hint": "resides in Mackay/locality allowance"
+    },
+    {
+      "id": "pit_to_port",
+      "name": "Pit-to-port shutdown/maintenance experience",
+      "weight": 2,
+      "hint": "infrastructure shutdowns across pit-to-port, incl. stacker reclaimers"
+    },
+    {
+      "id": "contractors_history",
+      "name": "History with reputable mining contractors",
+      "weight": 1,
+      "hint": "Sync Lift, Monadelphous, Downer, UGL"
+    },
+    {
+      "id": "adaptability",
+      "name": "Adaptability in high-pressure, deadline-driven environments",
+      "weight": 1,
+      "hint": "adaptable/flexible under deadlines and dynamic conditions"
+    },
+    {
+      "id": "safety_initiatives",
+      "name": "Engagement in safety leadership or best practices",
+      "weight": 1,
+      "hint": "safety rep, toolbox talks, led safety initiatives"
+    }
+  ],
+
+  "red_flags": [
+    {
+      "id": "no_elec_licence",
+      "name": "No recognised electrical trade qualification/licence",
+      "hard_fail": true,
+      "penalty": 4,
+      "hint": "no electrician trade certificate/licence"
+    },
+    {
+      "id": "no_shutdown_exp",
+      "name": "No shutdown/project experience in mining/industrial",
+      "hard_fail": true,
+      "penalty": 4,
+      "hint": "no project or shutdown history"
+    },
+    {
+      "id": "missing_safety_certs",
+      "name": "Missing mandatory safety certifications",
+      "hard_fail": true,
+      "penalty": 4,
+      "hint": "no White Card, Heights, Confined Space, Gas Test"
+    },
+    {
+      "id": "no_medical_screening",
+      "name": "Unwilling/unable to complete medical or drug/alcohol screening",
+      "hard_fail": false,
+      "penalty": 4,
+      "hint": "refused/failed pre-employment medical or D&A test"
+    },
+    {
+      "id": "limited_availability",
+      "name": "Limited availability/flexibility for regional QLD projects",
+      "hard_fail": false,
+      "penalty": 2,
+      "hint": "cannot travel or commit to project schedule"
+    }
+  ],
+
+  "expirable_items": ["white_card", "safety_tickets"]
+}

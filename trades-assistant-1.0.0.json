@@ -1,0 +1,178 @@
+{
+  "role_id": "trades_assistant",
+  "version": "1.0.0",
+  "effective_from": "2025-09-02",
+  "locale": "en-AU",
+
+  "rules": {
+    "fail_on_any_red_flag": true,
+    "max_unknown_required": 0,
+    "thresholds": { "excellent": 7, "good": 4, "unsure": 1 }
+  },
+
+  "required": [
+    {
+      "id": "shutdown_assist_exp",
+      "name": "Shutdown/industrial project experience assisting qualified trades",
+      "hard_fail": true,
+      "hint": "shutdowns/turnarounds/outages; assisted fitters/boilermakers/electricians/riggers"
+    },
+    {
+      "id": "white_card",
+      "name": "Construction White Card (general induction)",
+      "hard_fail": true,
+      "hint": "White Card/General Construction Induction/CPCCWHS1001"
+    },
+    {
+      "id": "tickets_safety",
+      "name": "Current Working at Heights, Confined Space & Gas Test Atmospheres (within 2 years)",
+      "hard_fail": true,
+      "hint": "working at heights/WAH; confined space entry; gas test atmospheres/GTA; valid/current; issued ≤ 2 years"
+    },
+    {
+      "id": "physical_capacity",
+      "name": "Able to perform physically demanding labour safely",
+      "hard_fail": true,
+      "hint": "manual handling; use of hand tools; assisting with heavy lifts; fit for site work"
+    },
+    {
+      "id": "safety_mindset",
+      "name": "Strong safety awareness and willingness to follow instructions/site procedures",
+      "hard_fail": true,
+      "hint": "JSA/JSEA/Take 5; follows procedures; listens to direction"
+    },
+    {
+      "id": "drivers_license",
+      "name": "Current driver’s licence",
+      "hard_fail": true,
+      "hint": "driver licence/driver's license/QLD open or P"
+    }
+  ],
+
+  "positives": [
+    {
+      "id": "coal_chpp_shutdowns",
+      "name": "Experience in coal terminals, CHPPs, or large mining shutdowns",
+      "weight": 2,
+      "hint": "coal terminal/CHPP/prep plant/mining shutdown environments"
+    },
+    {
+      "id": "infra_exposure",
+      "name": "Exposure to stacker-reclaimers, draglines, conveyors, or port infrastructure",
+      "weight": 2,
+      "hint": "stacker reclaimer/dragline/conveyor/shiploader/port"
+    },
+    {
+      "id": "forklift_lf",
+      "name": "Forklift licence (LF)",
+      "weight": 2,
+      "hint": "LF licence/forklift ticket"
+    },
+    {
+      "id": "ewp_wp",
+      "name": "EWP licence (WP)",
+      "weight": 2,
+      "hint": "EWP/work platform ticket"
+    },
+    {
+      "id": "dogging_dg",
+      "name": "Dogging (DG) ticket",
+      "weight": 1,
+      "hint": "dogging licence/DG ticket"
+    },
+    {
+      "id": "telehandler",
+      "name": "Telehandler ticket",
+      "weight": 1,
+      "hint": "telehandler/Manitou ticket"
+    },
+    {
+      "id": "mackay_local",
+      "name": "Local Mackay residency",
+      "weight": 1,
+      "hint": "resides in Mackay/locality allowance"
+    },
+    {
+      "id": "first_aid",
+      "name": "First Aid / CPR certification",
+      "weight": 1,
+      "hint": "First Aid certificate/CPR"
+    },
+    {
+      "id": "basic_mech_elec",
+      "name": "Basic mechanical/electrical aptitude",
+      "weight": 1,
+      "hint": "use of power tools, drills, grinders; basic trade aptitude"
+    },
+    {
+      "id": "trade_interest",
+      "name": "Interest in progressing towards trade qualification",
+      "weight": 1,
+      "hint": "keen to start apprenticeship, learn trade"
+    },
+    {
+      "id": "reliability",
+      "name": "Reliability and work ethic in shutdown/project roles",
+      "weight": 1,
+      "hint": "reliable, punctual, consistent attendance"
+    },
+    {
+      "id": "team_support",
+      "name": "Willingness to support multiple trades flexibly",
+      "weight": 1,
+      "hint": "helping fitters, riggers, boilermakers as needed"
+    },
+    {
+      "id": "teamwork",
+      "name": "Good teamwork and communication",
+      "weight": 1,
+      "hint": "works well in teams, communicates with supervisors"
+    },
+    {
+      "id": "contractor_history",
+      "name": "Consistent work history with reputable mining contractors",
+      "weight": 1,
+      "hint": "Monadelphous, Kaefer, Richglen, CQ Field, FMS Group, etc."
+    }
+  ],
+
+  "red_flags": [
+    {
+      "id": "no_site_exp",
+      "name": "No prior site-based or shutdown experience",
+      "hard_fail": true,
+      "penalty": 4,
+      "hint": "never worked on-site, no shutdown/project history"
+    },
+    {
+      "id": "missing_certs",
+      "name": "Missing mandatory safety certifications",
+      "hard_fail": true,
+      "penalty": 4,
+      "hint": "no White Card, Heights, Confined Space, Gas Test"
+    },
+    {
+      "id": "unfit_labour",
+      "name": "Reluctance to perform manual/physical tasks",
+      "hard_fail": false,
+      "penalty": 4,
+      "hint": "not willing or unable to perform labour-intensive work"
+    },
+    {
+      "id": "employment_gaps",
+      "name": "Unexplained employment gaps or poor reliability",
+      "hard_fail": false,
+      "penalty": 4,
+      "hint": "job hopping, short stints, gaps without explanation"
+    },
+    {
+      "id": "poor_safety",
+      "name": "Indicators of poor safety behaviour or refusal to follow direction",
+      "hard_fail": true,
+      "penalty": 4,
+      "hint": "ignores safety, fails to follow instructions"
+    }
+  ],
+
+  "expirable_items": ["white_card", "tickets_safety", "drivers_license"]
+}

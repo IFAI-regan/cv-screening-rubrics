@@ -1,0 +1,166 @@
+{
+  "role_id": "rigger",
+  "version": "1.0.0",
+  "effective_from": "2025-09-02",
+  "locale": "en-AU",
+
+  "rules": {
+    "fail_on_any_red_flag": true,
+    "max_unknown_required": 0,
+    "thresholds": { "excellent": 7, "good": 4, "unsure": 1 }
+  },
+
+  "required": [
+    {
+      "id": "riggers_ticket",
+      "name": "Intermediate or Advanced Riggers ticket",
+      "hard_fail": true,
+      "hint": "RI or RA licence/ticket"
+    },
+    {
+      "id": "shutdown_exp",
+      "name": "Shutdown/project-based experience (mining or heavy industry)",
+      "hard_fail": true,
+      "hint": "shutdown/turnaround/project in mining/heavy industry"
+    },
+    {
+      "id": "white_card",
+      "name": "Construction White Card",
+      "hard_fail": true,
+      "hint": "White Card/General Construction Induction/CPCCWHS1001"
+    },
+    {
+      "id": "safety_tickets",
+      "name": "Working at Heights, Confined Space & Gas Test Atmospheres (current ≤ 2 years)",
+      "hard_fail": true,
+      "hint": "WAH/Confined Space/GTA current within 2 years"
+    },
+    {
+      "id": "safety_mindset",
+      "name": "Strong safety focus, teamwork, comms & problem-solving",
+      "hard_fail": true,
+      "hint": "team player, safety awareness, effective communication, problem solving"
+    }
+  ],
+
+  "positives": [
+    {
+      "id": "coal_board_medical",
+      "name": "Current Coal Board Medical or ability to obtain",
+      "weight": 2,
+      "hint": "Coal Board Medical/CBM/section 4 medical"
+    },
+    {
+      "id": "msic",
+      "name": "MSIC (Marine Security Identification Card)",
+      "weight": 1,
+      "hint": "MSIC/port access/terminal security card"
+    },
+    {
+      "id": "forklift_lf",
+      "name": "Forklift licence (LF)",
+      "weight": 1,
+      "hint": "LF licence/forklift ticket"
+    },
+    {
+      "id": "ewp_wp",
+      "name": "EWP licence (WP)",
+      "weight": 1,
+      "hint": "EWP/work platform ticket"
+    },
+    {
+      "id": "dogging_dg",
+      "name": "Dogging (DG) ticket",
+      "weight": 1,
+      "hint": "dogging licence/DG ticket"
+    },
+    {
+      "id": "rigging_cb",
+      "name": "Rigging (CB) ticket",
+      "weight": 1,
+      "hint": "basic rigging/CB licence"
+    },
+    {
+      "id": "overhead_crane",
+      "name": "Overhead crane licence/experience",
+      "weight": 1,
+      "hint": "overhead crane operation/ticket"
+    },
+    {
+      "id": "telehandler",
+      "name": "Telehandler ticket",
+      "weight": 1,
+      "hint": "telehandler/Manitou ticket"
+    },
+    {
+      "id": "mackay_local",
+      "name": "Local Mackay residency",
+      "weight": 1,
+      "hint": "resides in Mackay/locality allowance"
+    },
+    {
+      "id": "stacker_shutdown",
+      "name": "Stacker Reclaimer shutdown experience",
+      "weight": 2,
+      "hint": "stacker reclaimer shutdown/structural repairs/slew drive work"
+    },
+    {
+      "id": "pit_to_port",
+      "name": "Pit-to-port shutdown/maintenance experience",
+      "weight": 2,
+      "hint": "infrastructure shutdowns across pit-to-port"
+    },
+    {
+      "id": "contractors_history",
+      "name": "History with shutdown contractors (e.g., Sync Lift, Monadelphous, Downer)",
+      "weight": 1,
+      "hint": "well-known contractors in projects & shutdowns"
+    },
+    {
+      "id": "safety_initiatives",
+      "name": "Proactive in safety leadership/initiatives",
+      "weight": 1,
+      "hint": "led/toolbox talks/safety rep/initiatives"
+    }
+  ],
+
+  "red_flags": [
+    {
+      "id": "no_riggers_ticket",
+      "name": "No valid riggers licence",
+      "hard_fail": true,
+      "penalty": 4,
+      "hint": "missing Intermediate/Advanced Rigger licence"
+    },
+    {
+      "id": "no_shutdown_exp",
+      "name": "No shutdown/project experience",
+      "hard_fail": true,
+      "penalty": 4,
+      "hint": "no project or shutdown history"
+    },
+    {
+      "id": "missing_safety_certs",
+      "name": "Missing mandatory safety certifications",
+      "hard_fail": true,
+      "penalty": 4,
+      "hint": "missing White Card, Heights, Confined Space, Gas Test"
+    },
+    {
+      "id": "no_medical_screening",
+      "name": "Unwilling/unable to complete medical or drug/alcohol screening",
+      "hard_fail": false,
+      "penalty": 4,
+      "hint": "refused/failed pre-employment medical or D&A test"
+    },
+    {
+      "id": "limited_availability",
+      "name": "Limited availability/flexibility for regional QLD projects",
+      "hard_fail": false,
+      "penalty": 2,
+      "hint": "cannot travel or commit to project schedule"
+    }
+  ],
+
+  "expirable_items": ["white_card", "safety_tickets"]
+}

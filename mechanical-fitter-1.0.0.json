@@ -1,0 +1,172 @@
+{
+  "role_id": "mechanical_fitter",
+  "version": "1.0.0",
+  "effective_from": "2025-09-02",
+  "locale": "en-AU",
+
+  "rules": {
+    "fail_on_any_red_flag": true,
+    "max_unknown_required": 0,
+    "thresholds": { "excellent": 7, "good": 4, "unsure": 1 }
+  },
+
+  "required": [
+    {
+      "id": "mech_trade_cert",
+      "name": "Certificate III or higher in Mechanical Fitting (or equivalent)",
+      "hard_fail": true,
+      "hint": "Certificate III/Cert III/Cert 3 in Mechanical Fitting or equivalent trade qualification"
+    },
+    {
+      "id": "shutdown_exp",
+      "name": "Shutdown/project-based mechanical fitting experience",
+      "hard_fail": true,
+      "hint": "shutdowns, construction shutdowns, project-based maintenance"
+    },
+    {
+      "id": "white_card",
+      "name": "Construction White Card",
+      "hard_fail": true,
+      "hint": "White Card/General Construction Induction/CPCCWHS1001"
+    },
+    {
+      "id": "safety_tickets",
+      "name": "Working at Heights, Confined Space & Gas Test Atmospheres (current ≤ 2 years)",
+      "hard_fail": true,
+      "hint": "WAH/Confined Space/GTA tickets current/valid within last 2 years"
+    },
+    {
+      "id": "safety_mindset",
+      "name": "Strong safety mindset, teamwork, communication, problem-solving",
+      "hard_fail": true,
+      "hint": "safety-focused, team-oriented, effective communicator"
+    }
+  ],
+
+  "positives": [
+    {
+      "id": "coal_board_medical",
+      "name": "Current Coal Board Medical or ability to obtain",
+      "weight": 2,
+      "hint": "Coal Board Medical/CBM/section 4 medical"
+    },
+    {
+      "id": "msic",
+      "name": "MSIC (Marine Security Identification Card)",
+      "weight": 1,
+      "hint": "MSIC/port access/terminal security card"
+    },
+    {
+      "id": "forklift_lf",
+      "name": "Forklift licence (LF)",
+      "weight": 1,
+      "hint": "LF licence/forklift ticket"
+    },
+    {
+      "id": "ewp_wp",
+      "name": "EWP licence (WP)",
+      "weight": 1,
+      "hint": "EWP/work platform ticket"
+    },
+    {
+      "id": "dogging_dg",
+      "name": "Dogging (DG) ticket",
+      "weight": 1,
+      "hint": "dogging licence/DG ticket"
+    },
+    {
+      "id": "rigging_cb",
+      "name": "Rigging (CB) ticket",
+      "weight": 1,
+      "hint": "basic rigging/CB licence"
+    },
+    {
+      "id": "overhead_crane",
+      "name": "Overhead crane licence/experience",
+      "weight": 1,
+      "hint": "overhead crane operation/ticket"
+    },
+    {
+      "id": "telehandler",
+      "name": "Telehandler (Telescopic Handler) ticket",
+      "weight": 1,
+      "hint": "telehandler/Manitou ticket"
+    },
+    {
+      "id": "mackay_local",
+      "name": "Local Mackay residency",
+      "weight": 1,
+      "hint": "resides in Mackay/locality allowance"
+    },
+    {
+      "id": "fixed_plant_exp",
+      "name": "Experience with fixed plant mechanical components",
+      "weight": 2,
+      "hint": "stacker reclaimers, lubrication systems, bearings, gearboxes, slew drives"
+    },
+    {
+      "id": "projects_shutdowns",
+      "name": "Experience in projects/shutdowns in coal/terminal operations",
+      "weight": 2,
+      "hint": "shutdowns/projects in coal terminals, port operations"
+    },
+    {
+      "id": "contractors_history",
+      "name": "History with reputable shutdown contractors",
+      "weight": 1,
+      "hint": "Sync Lift, Monadelphous, Downer, UGL, other shutdown contractors"
+    },
+    {
+      "id": "adaptability",
+      "name": "Adaptability across shutdowns and maintenance roles",
+      "weight": 1,
+      "hint": "flexible between short-term shutdowns and ongoing maintenance"
+    },
+    {
+      "id": "safety_initiatives",
+      "name": "Proactive safety leadership/initiatives",
+      "weight": 1,
+      "hint": "safety rep, toolbox talks, safety awards/initiatives"
+    }
+  ],
+
+  "red_flags": [
+    {
+      "id": "no_trade_cert",
+      "name": "No recognised mechanical fitter trade qualification",
+      "hard_fail": true,
+      "penalty": 4,
+      "hint": "no Certificate III or equivalent mechanical fitting qualification"
+    },
+    {
+      "id": "no_shutdown_exp",
+      "name": "No prior shutdown/project-based fitting experience",
+      "hard_fail": true,
+      "penalty": 4,
+      "hint": "no evidence of shutdown or project-based fitting"
+    },
+    {
+      "id": "missing_safety_certs",
+      "name": "Missing mandatory safety certifications",
+      "hard_fail": true,
+      "penalty": 4,
+      "hint": "no White Card, Heights, Confined Space, Gas Test"
+    },
+    {
+      "id": "no_medical_screening",
+      "name": "Unwilling/unable to complete medical or drug/alcohol screening",
+      "hard_fail": false,
+      "penalty": 4,
+      "hint": "refused/failed pre-employment medical or D&A test"
+    },
+    {
+      "id": "limited_availability",
+      "name": "Limited availability for regional QLD shutdowns",
+      "hard_fail": false,
+      "penalty": 2,
+      "hint": "cannot travel, not flexible for regional project schedules"
+    }
+  ],
+
+  "expirable_items": ["white_card", "safety_tickets"]
+}

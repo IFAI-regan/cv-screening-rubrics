@@ -1,0 +1,32 @@
+{
+  "boilermaker": {
+    "job_code": "001",
+    "current": "1.0.0",
+    "available": ["1.0.0"]
+  },
+  "mechanical_fitter": {
+    "job_code": "002",
+    "current": "1.0.0",
+    "available": ["1.0.0"]
+  },
+  "diesel_fitter": {
+    "job_code": "003",
+    "current": "1.0.0",
+    "available": ["1.0.0"]
+  },
+  "electrician": {
+    "job_code": "004",
+    "current": "1.0.0",
+    "available": ["1.0.0"]
+  },
+  "trades_assistant": {
+    "job_code": "005",
+    "current": "1.0.0",
+    "available": ["1.0.0"]
+  },
+  "rigger": {
+    "job_code": "006",
+    "current": "1.0.0",
+    "available": ["1.0.0"]
+  }
+}

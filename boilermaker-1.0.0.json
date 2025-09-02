@@ -1,0 +1,147 @@
+{
+  "role_id": "boilermaker",
+  "version": "1.0.0",
+  "effective_from": "2025-09-02",
+  "locale": "en-AU",
+
+  "rules": {
+    "fail_on_any_red_flag": true,
+    "max_unknown_required": 0,
+    "thresholds": { "excellent": 7, "good": 4, "unsure": 1 }
+  },
+
+  "required": [
+    {
+      "id": "trade_cert",
+      "name": "Certificate III (or higher) in Boilermaking/Heavy Fabrication",
+      "hard_fail": true,
+      "hint": "Certificate III/Cert III/Cert 3 in Engineering (Boilermaker/Heavy Fabrication)"
+    },
+    {
+      "id": "exp_2yrs",
+      "name": "Minimum 2 years post-trade experience",
+      "hard_fail": true,
+      "hint": "2+ years post-trade, relevant boilermaker/fabrication work"
+    },
+    {
+      "id": "qld_mining",
+      "name": "Queensland coal-mining experience",
+      "hard_fail": true,
+      "hint": "QLD mining/coal site projects (Goonyella, Blackwater, Moranbah, etc.)"
+    },
+    {
+      "id": "std11",
+      "name": "Current Standard 11 certification",
+      "hard_fail": true,
+      "hint": "Standard 11/S11/GI induction valid/current"
+    },
+    {
+      "id": "drivers_license",
+      "name": "Current driver’s licence",
+      "hard_fail": true,
+      "hint": "driver licence/driver's license"
+    }
+  ],
+
+  "positives": [
+    {
+      "id": "dragline_exp",
+      "name": "Dragline maintenance experience",
+      "weight": 2,
+      "hint": "dragline shutdowns/maintenance"
+    },
+    {
+      "id": "welding_quals",
+      "name": "Recognised welding qualifications (ISO 9606, AS/NZS 2980)",
+      "weight": 2,
+      "hint": "ISO 9606/AS 2980 welding tickets"
+    },
+    {
+      "id": "fcaw_plate",
+      "name": "FCAW plate tests 1G–4G / 1F–4F",
+      "weight": 1,
+      "hint": "flux-cored arc welding, test positions 1G-4G or 1F-4F"
+    },
+    {
+      "id": "gcaa2",
+      "name": "GCAA Level 2 Welder ticket",
+      "weight": 2,
+      "hint": "GCAA L2 welder certification"
+    },
+    {
+      "id": "heights",
+      "name": "Working at heights",
+      "weight": 1,
+      "hint": "WAH/working at heights ticket"
+    },
+    {
+      "id": "confined_space",
+      "name": "Confined-space entry",
+      "weight": 1,
+      "hint": "confined space entry permit/ticket"
+    },
+    {
+      "id": "gas_test",
+      "name": "Gas-test atmospheres",
+      "weight": 1,
+      "hint": "gas test atmospheres/GTA ticket"
+    },
+    {
+      "id": "forklift",
+      "name": "Forklift licence (LF)",
+      "weight": 1,
+      "hint": "LF licence/forklift ticket"
+    },
+    {
+      "id": "ewp",
+      "name": "EWP licence",
+      "weight": 1,
+      "hint": "elevated work platform/EWP ticket"
+    },
+    {
+      "id": "contractor_history",
+      "name": "Employment with reputable mining contractors",
+      "weight": 1,
+      "hint": "Kaefer, Monadelphous, Richglen, CQ Field, FMS Group"
+    },
+    {
+      "id": "infra_exp",
+      "name": "Experience on stackers, reclaimers, shiploaders, or port infra",
+      "weight": 2,
+      "hint": "stackers/reclaimers/shiploaders/port infrastructure"
+    }
+  ],
+
+  "red_flags": [
+    {
+      "id": "no_trade_or_mining",
+      "name": "No trade qualification or mining-related work history",
+      "hard_fail": true,
+      "penalty": 4,
+      "hint": "no Certificate III or no mining/coal site experience"
+    },
+    {
+      "id": "non_au",
+      "name": "Candidate located outside Australia",
+      "hard_fail": true,
+      "penalty": 4,
+      "hint": "work location or residency outside AU"
+    },
+    {
+      "id": "employment_gaps",
+      "name": "Unexplained employment gaps or overlapping dates",
+      "hard_fail": false,
+      "penalty": 4,
+      "hint": "gaps >6 months or inconsistent timeline without reason"
+    },
+    {
+      "id": "fitness_limitations",
+      "name": "Indicators of limited physical capability for site work",
+      "hard_fail": false,
+      "penalty": 4,
+      "hint": "unable to perform heavy labour, site requirements not met"
+    }
+  ],
+
+  "expirable_items": ["std11", "drivers_license"]
+}
