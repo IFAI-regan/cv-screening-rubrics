@@ -7,7 +7,7 @@
 
   "rules": {
     "fail_on_any_red_flag": false,
-    "max_unknown_required": 1
+    "max_unknown_required": 0
   },
 
   "required": [
@@ -18,24 +18,32 @@
     },
     {
       "id": "exp_2yrs",
-      "name": "Minimum 2 years relevant post-trade boilermaker/fabrication experience",
-      "hint": "2+ years post-trade in boilermaker/fabrication roles"
+      "name": "Minimum 2 years post-trade experience",
+      "hint": "2+ years post-qualification in boilermaker/fabrication roles (do NOT count apprenticeship)"
     },
     {
-      "id": "site_ready",
-      "name": "Site readiness: Standard 11 OR White Card (either acceptable)",
-      "hint": "Standard 11 (GI/S11) OR Construction White Card (CPCCWHS1001)"
+      "id": "qld_mining",
+      "name": "Queensland coal-mining experience",
+      "hint": "QLD coal sites e.g., Goonyella, Blackwater, Moranbah, etc."
+    },
+    {
+      "id": "std11",
+      "name": "Current Standard 11 certification",
+      "hint": "Standard 11 (GI/S11) stated as current/valid"
+    },
+    {
+      "id": "drivers_license",
+      "name": "Current driver’s licence",
+      "hint": "driver licence/driver's license; current/valid"
     }
   ],
 
   "positives": [
-    { "id": "qld_mining",        "name": "Queensland coal-mining/site experience", "hint": "QLD mining sites: Goonyella, Blackwater, Moranbah, etc." },
-    { "id": "welding_quals",     "name": "Recognised welding quals (ISO 9606, AS/NZS 2980)", "hint": "ISO 9606 / AS/NZS 2980" },
-    { "id": "fcaw_plate",        "name": "FCAW plate tests 1G–4G / 1F–4F", "hint": "flux-cored arc welding, 1G-4G, 1F-4F" },
-    { "id": "dragline_exp",      "name": "Dragline maintenance experience", "hint": "dragline shutdowns/maintenance" },
-    { "id": "infra_exp",         "name": "Stackers, reclaimers, shiploaders, or port infrastructure", "hint": "stackers/reclaimers/shiploaders/port infrastructure" },
-    { "id": "contractor_history","name": "Work with reputable mining contractors", "hint": "Kaefer, Monadelphous, Richglen, CQ Field, FMS Group" },
-    { "id": "drivers_license",   "name": "Current driver’s licence", "hint": "driver licence/driver's license" }
+    { "id": "welding_quals", "name": "Recognised welding quals (ISO 9606, AS/NZS 2980)", "hint": "ISO 9606 / AS/NZS 2980" },
+    { "id": "fcaw_plate", "name": "FCAW plate tests 1G–4G / 1F–4F", "hint": "flux-cored arc welding, 1G-4G, 1F-4F" },
+    { "id": "dragline_exp", "name": "Dragline maintenance experience", "hint": "dragline shutdowns/maintenance" },
+    { "id": "infra_exp", "name": "Stackers, reclaimers, shiploaders, or port infrastructure", "hint": "stackers/reclaimers/shiploaders/port infrastructure" },
+    { "id": "contractor_history", "name": "Work with reputable mining contractors", "hint": "Kaefer, Monadelphous, Richglen, CQ Field, FMS Group" }
   ],
 
   "red_flags": [
@@ -47,8 +55,10 @@
     }
   ],
 
+  "expirable_items": ["std11", "drivers_license"],
+
   "notes": {
-    "unknown_policy": "If evidence for a required item is unclear or not explicit, mark as Unknown (do not guess). If > max_unknown_required, prefer 'Unsure – Needs Manual Review'.",
-    "site_ready_tip": "Mark 'site_ready' as met if EITHER Standard 11 OR White Card appears. If neither is clearly stated, set Unknown."
+    "unknown_policy": "If evidence for a required item is unclear or not explicit, mark Unknown (do not guess). With max_unknown_required=0, any Unknown on required → Unsure.",
+    "experience_policy": "Only count post-trade employment towards exp_2yrs; exclude apprenticeship/trainee time."
   }
 }
