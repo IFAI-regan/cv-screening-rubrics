@@ -1,0 +1,59 @@
+{
+  "role_id": "electrician",
+  "role_name": "Electrician",
+  "version": "1.0.1",
+  "effective_from": "2025-09-03",
+  "locale": "en-AU",
+
+  "rules": {
+    "fail_on_any_red_flag": false,
+    "max_unknown_required": 1
+  },
+
+  "required": [
+    {
+      "id": "elec_trade_cert",
+      "name": "Qualified/licensed Electrician",
+      "hint": "A-grade electrician licence; QLD/NSW electrical licence; Australian trade certificate"
+    },
+    {
+      "id": "exp_2yrs",
+      "name": "Minimum 2 years relevant maintenance/project experience (mining/heavy industry preferred)",
+      "hint": "2+ years in industrial maintenance, shutdowns, or projects"
+    },
+    {
+      "id": "site_ready",
+      "name": "Site readiness: Standard 11 OR White Card (either acceptable)",
+      "hint": "Standard 11 (GI/S11) OR Construction White Card (CPCCWHS1001)"
+    }
+  ],
+
+  "positives": [
+    { "id": "pit_to_port",          "name": "Pit-to-port shutdown/maintenance experience", "hint": "stacker reclaimers, conveyors, shiploaders, terminals" },
+    { "id": "coal_board_medical",   "name": "Current Coal Board Medical (or ability to obtain)", "hint": "CBM/Section 4 medical" },
+    { "id": "msic",                 "name": "MSIC (Marine Security Identification Card)", "hint": "port/terminal access" },
+    { "id": "forklift_lf",          "name": "Forklift licence (LF)", "hint": "LF licence/forklift ticket" },
+    { "id": "ewp_wp",               "name": "EWP licence (WP)", "hint": "elevated work platform" },
+    { "id": "dogging_dg",           "name": "Dogging (DG) ticket", "hint": "dogging licence" },
+    { "id": "rigging_cb",           "name": "Rigging (CB) ticket", "hint": "basic rigging" },
+    { "id": "overhead_crane",       "name": "Overhead crane experience/licence", "hint": "overhead crane operation" },
+    { "id": "telehandler",          "name": "Telehandler ticket", "hint": "Manitou/telehandler" },
+    { "id": "contractors_history",  "name": "Work with reputable mining contractors", "hint": "Sync Lift, Monadelphous, Downer, UGL" },
+    { "id": "adaptability",         "name": "Adaptability in high-pressure, deadline-driven environments", "hint": "shutdown tempo, flexible under deadlines" },
+    { "id": "safety_initiatives",   "name": "Engagement in safety leadership or best practices", "hint": "safety rep, toolbox talks, initiatives" }
+  ],
+
+  "red_flags": [
+    {
+      "id": "non_au",
+      "name": "Candidate explicitly located outside Australia",
+      "hard_fail": false,
+      "hint": "If location clearly outside AU → red flag. If missing/unclear → mark Unknown."
+    }
+  ],
+
+  "notes": {
+    "unknown_policy": "If a required item is not explicit in the CV text, mark as Unknown (do not guess). If more than max_unknown_required are Unknown, prefer 'Unsure – Needs Manual Review'.",
+    "site_ready_tip": "Mark 'site_ready' as met if EITHER Standard 11 OR White Card appears. If neither is clearly stated, set Unknown."
+  }
+}
