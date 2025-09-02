@@ -1,0 +1,102 @@
+{
+  "role_id": "diesel_fitter",
+  "role_name": "Diesel Fitter",
+  "version": "1.0.1",
+  "effective_from": "2025-09-03",
+  "locale": "en-AU",
+
+  "rules": {
+    "fail_on_any_red_flag": false,
+    "max_unknown_required": 1
+  },
+
+  "required": [
+    {
+      "id": "diesel_trade_cert",
+      "name": "Certificate III in Heavy Vehicle/Diesel Fitting (or equivalent)",
+      "hint": "Certificate III Heavy Commercial Vehicle, Mobile Plant Technology, Diesel Fitting, or equivalent"
+    },
+    {
+      "id": "exp_2yrs",
+      "name": "Minimum 2 years relevant post-trade experience on heavy mobile plant/HME",
+      "hint": "2+ years on heavy mobile equipment in mining/ports/resources"
+    },
+    {
+      "id": "site_ready",
+      "name": "Site readiness: Standard 11 OR White Card (either acceptable)",
+      "hint": "Standard 11 (GI/S11) OR Construction White Card (CPCCWHS1001)"
+    }
+  ],
+
+  "positives": [
+    {
+      "id": "shutdown_exp",
+      "name": "Exposure to project/shutdown-style maintenance",
+      "hint": "high-pressure shutdown/project diesel maintenance"
+    },
+    {
+      "id": "field_service",
+      "name": "Field-based diesel fitting experience",
+      "hint": "field service, breakdowns, servicing mobile equipment on site"
+    },
+    {
+      "id": "stacker_reclaimer_exp",
+      "name": "Maintenance on stacker-reclaimer components, haul trucks, or auxiliary plant",
+      "hint": "stacker-reclaimer mobile components, haul trucks, auxiliary plant"
+    },
+    {
+      "id": "welding_basic",
+      "name": "Basic welding/fabrication competency",
+      "hint": "basic welding/fabrication for repairs"
+    },
+    {
+      "id": "forklift_lf",
+      "name": "Forklift licence (LF)",
+      "hint": "LF licence/forklift ticket"
+    },
+    {
+      "id": "ewp_wp",
+      "name": "EWP licence (WP)",
+      "hint": "EWP/work platform ticket"
+    },
+    {
+      "id": "rigging",
+      "name": "Rigging/Slings competency",
+      "hint": "basic rigging/slings HRWL"
+    },
+    {
+      "id": "msic",
+      "name": "MSIC (Marine Security Identification Card)",
+      "hint": "MSIC/port access/terminal security card"
+    },
+    {
+      "id": "coal_board_medical",
+      "name": "Current Coal Board Medical (or ability to obtain)",
+      "hint": "Coal Board Medical certificate"
+    },
+    {
+      "id": "contractors_history",
+      "name": "History with reputable shutdown contractors",
+      "hint": "Sync Lift, Monadelphous, UGL, Downer"
+    },
+    {
+      "id": "flexibility",
+      "name": "Flexibility for ROTB/FIFO schedules",
+      "hint": "willing to work fly-in fly-out or rostered on-the-bus"
+    }
+  ],
+
+  "red_flags": [
+    {
+      "id": "non_au",
+      "name": "Candidate explicitly located outside Australia",
+      "hard_fail": false,
+      "hint": "If location text clearly outside AU → red flag. If missing/unclear → mark Unknown."
+    }
+  ],
+
+  "notes": {
+    "unknown_policy": "If a required item is not explicit in the CV text, mark as Unknown (do not guess). If more than max_unknown_required are Unknown, prefer 'Unsure – Needs Manual Review'.",
+    "site_ready_tip": "Mark 'site_ready' as met if EITHER Standard 11 OR White Card appears. If neither is clearly stated, set Unknown."
+  }
+}
