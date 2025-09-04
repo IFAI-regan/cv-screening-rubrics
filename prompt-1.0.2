@@ -33,10 +33,11 @@ TWO-PHASE PROCESS
    - Do not use any information beyond Phase 1 extractions.
 
 RUBRIC (JSON)
-{{RUBRIC_JSON}}
+${JSON.stringify($('05 Fetch Rubric').first().json)}
+
 
 CV TEXT
-{{CV_TEXT}}
+${$('03 Parse & Anonymise').first().json.text_anonymised}
 
 OUTPUT JSON FORMAT (exactly one object; no markdown, no commentary):
 {
