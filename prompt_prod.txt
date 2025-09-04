@@ -1,7 +1,4 @@
----
-id: screen_v1
-version: 2025-09-04.1
----
+# version: 1.0.1
 
 You are an assistant screening candidates for a Boilermaker role.
 
